@@ -69,4 +69,28 @@ schedule.show_all_tasks()
 
 admin.delete_task(schedule, "Жаттығу жасау")
 
+12 week
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+months = np.array(["Қаңтар", "Ақпан", "Наурыз", "Сәуір", "Мамыр", "Маусым"])
+tasks_done = np.array([18, 22, 25, 20, 27, 30])
+
+
+average_tasks = np.mean(tasks_done)
+print("Орташа орындалған тапсырма саны:", average_tasks)
+
+
+plt.figure(figsize=(10, 5))
+plt.plot(months, tasks_done, marker='o', linewidth=2)
+
+plt.title("Айлар бойынша орындалған тапсырмалар динамикасы")
+plt.xlabel("Айлар")
+plt.ylabel("Орындалған тапсырмалар саны")
+
+plt.grid(True)
+plt.show()
+
+
 schedule.show_all_tasks()
